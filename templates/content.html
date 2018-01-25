@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<title>recipe</title>
+{#<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">#}
+<div class=page>
+  <h1>推荐如下:</h1>
+  {% if error is not none %}
+      <p>{{ error }}</p>
+  {% else %}
+      {% for entry in entries %}
+            <li>{{ entry}};</li>
+      {% endfor %}
+  {% endif %}
+</div>
+</html>
