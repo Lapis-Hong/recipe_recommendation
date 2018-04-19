@@ -50,6 +50,11 @@
 
   <div class="w3-display-middle w3-jumbo">
     <p style="font-family: 'Pacifico', cursive; font-size: 96px;">健康饮食</p>
+      <h1 style="font-family: 'Pacifico', cursive; margin-left:40px; font-size:50px;">今日推荐: </h1>
+            <h5 style="font-family: 'Pacifico', cursive; margin-left:40px;"> 早餐: {{entries[0]}}</h5>
+            <h5 style="font-family: 'Pacifico', cursive; margin-left:40px;"> 午餐: {{entries[1]}}</h5>
+            <h5 style="font-family: 'Pacifico', cursive; margin-left:40px;"> 晚餐: {{entries[2]}}</h5>
+        </div>
   </div>
 
     <div class="container" style="width: 100%; padding-left: 0px; padding-right:0px; margin-left: 100px;">
@@ -58,6 +63,13 @@
               {% if error is not none %}
                   <p>{{ error }}</p>
               {% else %}
+                  <h1 style="font-family: 'Pacifico', cursive; margin-left:20px; font-size:50px;">今日推荐: </h1>
+                    <div id="report" class="w3-middle container" style="display:none; overflow-y: scroll; overflow-x: hidden; height: 500px;">
+                        <p></p>
+                        <h5> 早餐:{{ entries[0]}}</h5>
+                        <h5> 午餐:{{ entries[1]}}</h5>
+                        <h5> 晚餐:{{ entries[2]}}</h5>
+                    </div>
                   <!-- First Photo Grid-->
 {#                <div class="w3-row-padding w3-padding-16 w3-center" id="food">#}
 {#                <div class="w3-third">#}
@@ -125,25 +137,25 @@
     </div>
     {% endif %}
 
-<!-- Contact Modal -->
-<div id="contact" class="w3-modal">
-  <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-black">
-      <span onclick="document.getElementById('联系').style.display='none'" class="w3-button w3-display-topright w3-black">x</span>
-      <!-- <h1>Contact</h1> -->
-    </div>
-    <div class="w3-container">
-      <p>Reserve a table, ask for today's special or just send us a message:</p>
-      <form action="/action_page.php" target="_blank">
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
-        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-        <p><button class="w3-button" type="submit">SEND MESSAGE</button></p>
-      </form>
-    </div>
-  </div>
-</div>
+{#<!-- Contact Modal -->#}
+{#<div id="contact" class="w3-modal">#}
+{#  <div class="w3-modal-content w3-animate-zoom">#}
+{#    <div class="w3-container w3-black">#}
+{#      <span onclick="document.getElementById('联系').style.display='none'" class="w3-button w3-display-topright w3-black">x</span>#}
+{#      <!-- <h1>Contact</h1> -->#}
+{#    </div>#}
+{#    <div class="w3-container">#}
+{#      <p>Reserve a table, ask for today's special or just send us a message:</p>#}
+{#      <form action="/action_page.php" target="_blank">#}
+{#        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>#}
+{#        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>#}
+{#        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>#}
+{#        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>#}
+{#        <p><button class="w3-button" type="submit">SEND MESSAGE</button></p>#}
+{#      </form>#}
+{#    </div>#}
+{#  </div>#}
+{#</div>#}
 
 <script>
 // Script to open and close sidebar

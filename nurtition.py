@@ -1,4 +1,4 @@
-#coding=utf8
+# coding=utf8
 import numpy as np
 
 
@@ -235,7 +235,6 @@ def EER_chinese(gender, age, activity_level):
         err = 900 if gender == u'男' else 800
     if age == 2:
         pass
-
 
 
 if __name__ == '__main__':

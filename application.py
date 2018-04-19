@@ -22,10 +22,11 @@ def show_recipes():
     activity = request.args.get('activity')
     satisfied_recipes = recipe(age, height, weight, gender, activity)
 
+    entries = []
     for item in satisfied_recipes:
         print(' '.join(item))
-    entries = satisfied_recipes
-    return render_template('content.html', entries=entries)
+        entries.append(' '.join(item))
+    return render_template('recipeRecommend.html', entries=entries)
 
 
 @app.route('/', methods=['GET', 'POST'])

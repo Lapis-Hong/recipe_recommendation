@@ -1,14 +1,17 @@
 <!doctype html>
 <html lang="zh-CN">
-<title>recipe</title>
+<title>推荐菜单</title>
 {#<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">#}
-<div class=page>
+{#<form action="{{ url_for('show_recipes') }}" method=post class=show_recipes>#}
+{#</form>#}
+
+<div class=entries>
   <h1>推荐如下:</h1>
   {% if error is not none %}
       <p>{{ error }}</p>
   {% else %}
       {% for entry in entries %}
-            <li>{{ entry}};</li>
+            <li>{{entry}};</li>
       {% endfor %}
   {% endif %}
 </div>
